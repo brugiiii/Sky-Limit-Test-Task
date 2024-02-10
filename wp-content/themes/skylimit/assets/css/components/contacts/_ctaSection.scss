@@ -1,0 +1,74 @@
+
+.iti--separate-dial-code {
+  & .iti__selected-flag {
+    padding-left: 1.75rem;
+    background-color: transparent;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+}
+
+.iti__flag-container {
+  padding: 0;
+}
+
+.cta__wrapper {
+  &.loading {
+    & .cta-form {
+      opacity: 0.8;
+    }
+
+    & .loader {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.mail-send {
+    & .thank-you {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & .cta-form {
+      opacity: 0;
+    }
+  }
+}
+
+.cta-form__input {
+  border-color: transparent;
+  border-width: 1px;
+
+  &.invalid {
+    border-color: red;
+    color: red !important;
+
+    &::placeholder {
+      color: #f00B;
+    }
+  }
+}
+
+.cta-form__button {
+  height: 3.125rem;
+  border-radius: 0.5rem;
+
+  color: $white-color;
+  background-color: $accent-color;
+
+  &:disabled {
+    background-color: grey;
+  }
+}
+
+.thank-you {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cta-form,
+.thank-you {
+  @include transition(opacity);
+}

@@ -1,0 +1,16 @@
+.header {
+  padding-top: 1rem;
+
+  & a {
+    font-size: 1.25rem;
+  }
+
+  & .nav-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  & .contacts-list {
+    row-gap: 0.5rem;
+  }
+}

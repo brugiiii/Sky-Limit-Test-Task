@@ -1,0 +1,161 @@
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./assets/css/contacts.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+:root {
+  --primary-text-color: #010101;
+  --primary-bg-color: #f9f0e5;
+}
+
+.loader {
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dot {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #D4A971;
+  -webkit-animation: bounce 1.3s linear infinite;
+          animation: bounce 1.3s linear infinite;
+}
+
+.dot:nth-child(1) {
+  left: -1.5rem;
+}
+
+.dot:nth-child(2) {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.dot:nth-child(3) {
+  right: -2.5rem;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 66%, 100% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  33% {
+    -webkit-transform: translatey(-1rem);
+            transform: translatey(-1rem);
+  }
+}
+
+@keyframes bounce {
+  0%, 66%, 100% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  33% {
+    -webkit-transform: translatey(-1rem);
+            transform: translatey(-1rem);
+  }
+}
+.contacts-content .contacts-list {
+  gap: 5rem 2rem;
+}
+.contacts-content .contacts-list__item {
+  -ms-flex-preferred-size: calc((100% - 2rem) / 2);
+      flex-basis: calc((100% - 2rem) / 2);
+}
+.contacts-content .socials-list {
+  margin-top: auto;
+  gap: 2rem;
+}
+
+.contacts-wrapper__thumb {
+  aspect-ratio: 1/0.7;
+}
+.contacts-wrapper__thumb > p {
+  display: contents;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  padding-left: 1.75rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.iti__flag-container {
+  padding: 0;
+}
+
+.cta__wrapper.loading .cta-form {
+  opacity: 0.8;
+}
+.cta__wrapper.loading .loader {
+  opacity: 1;
+  visibility: visible;
+}
+.cta__wrapper.mail-send .thank-you {
+  opacity: 1;
+  visibility: visible;
+}
+.cta__wrapper.mail-send .cta-form {
+  opacity: 0;
+}
+
+.cta-form__input {
+  border-color: transparent;
+  border-width: 1px;
+}
+.cta-form__input.invalid {
+  border-color: red;
+  color: red !important;
+}
+.cta-form__input.invalid::-webkit-input-placeholder {
+  color: rgba(255, 0, 0, 0.7333333333);
+}
+.cta-form__input.invalid::-moz-placeholder {
+  color: rgba(255, 0, 0, 0.7333333333);
+}
+.cta-form__input.invalid:-ms-input-placeholder {
+  color: rgba(255, 0, 0, 0.7333333333);
+}
+.cta-form__input.invalid::-ms-input-placeholder {
+  color: rgba(255, 0, 0, 0.7333333333);
+}
+.cta-form__input.invalid::placeholder {
+  color: rgba(255, 0, 0, 0.7333333333);
+}
+
+.cta-form__button {
+  height: 3.125rem;
+  border-radius: 0.5rem;
+  color: #FFF;
+  background-color: #D4A971;
+}
+.cta-form__button:disabled {
+  background-color: grey;
+}
+
+.thank-you {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cta-form,
+.thank-you {
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+/*# sourceMappingURL=contacts.bundle.css.map*/

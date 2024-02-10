@@ -1,0 +1,22 @@
+.contacts-content {
+  & .contacts-list {
+    gap: 5rem 2rem;
+  }
+
+  & .contacts-list__item {
+    flex-basis: calc((100% - 2rem) / 2)
+  }
+  
+  & .socials-list {
+    margin-top: auto;
+    gap: 2rem;
+  }
+}
+
+.contacts-wrapper__thumb {
+  aspect-ratio: 1 / 0.7;
+
+  & > p {
+    display: contents;
+  }
+}
