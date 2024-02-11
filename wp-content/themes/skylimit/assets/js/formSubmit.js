@@ -1,9 +1,8 @@
-$('button[type="submit"]').on('click', function (e) {
+$('.cta-form').on('submit', function (e) {
     e.preventDefault();
 
-    const button = $(e.target);
-
-    const form = $(this).closest('form');
+    const form = $(e.currentTarget);
+    const button = form.find('cta-form__button');
     const telInput = form.find('input[type="tel"]');
     const nameInput = form.find('input[name="name"]');
 
@@ -16,9 +15,13 @@ $('button[type="submit"]').on('click', function (e) {
     const nameValue = nameInput.val().trim();
     const isValidName = (nameValue !== '' && /^[a-zA-Zа-яА-Я\s]+$/.test(nameValue));
 
+    const captcha = grecaptcha.getResponse();
+
+    !captcha.length ? $('#recaptchaError').text('Ви не пройшли перевірку!') :  $('#recaptchaError').text('');
+
     isValidName ? nameInput.addClass('valid') : nameInput.addClass('invalid');
 
-    if (isValidTelNumber && isValidName) {
+    if (isValidTelNumber && isValidName && captcha.length !== 0) {
         const formData = {
             action: 'send_mail',
             name: nameValue,
@@ -39,6 +42,8 @@ $('button[type="submit"]').on('click', function (e) {
             success: function(response) {
                 ctaWrapper.addClass('mail-send');
                 ctaWrapper.removeClass('loading');
+
+                grecaptcha.reset();
 
                 button.prop('disabled', false);
             },

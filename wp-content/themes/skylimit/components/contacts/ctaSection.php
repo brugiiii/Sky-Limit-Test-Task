@@ -14,6 +14,10 @@
                   method="post">
                 <input class="cta-form__input" type="text" name="name" placeholder="Едуард"/>
                 <input class="cta-form__input" type="tel" name="phone"/>
+
+                <div class="g-recaptcha" data-sitekey="6Lf9pm4pAAAAAAO_mhHtkfpw9_a8H1FCPXpY81PO"></div>
+                <div class="text-danger" id="recaptchaError"></div>
+
                 <button class="cta-form__button border-0" type="submit">
                     Надіслати
                 </button>

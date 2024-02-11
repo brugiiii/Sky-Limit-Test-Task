@@ -30,6 +30,8 @@ function enqueue_scripts_and_styles(){
         wp_enqueue_script('intl-tel-input', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput-jquery.min.js', array('jquery'), '17.0.12', true);
         wp_enqueue_script('intl-tel-input-utils', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.min.js', array('jquery'), '17.0.12', true);
 
+        wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', array('jquery'), null, true);
+
         wp_enqueue_script('contacts-js', get_template_directory_uri() . '/dist/js/contacts.bundle.js', array('jquery'), null, true);
 
         wp_localize_script('contacts-js', 'settings', array('ajax_url' => admin_url('admin-ajax.php')));
